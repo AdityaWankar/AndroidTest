@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/content_basic"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,42 +7,43 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.test.revise.BasicActivity"
-    tools:showIn="@layout/activity_basic">
-
+    android:orientation="vertical">
     <EditText
-        android:text=""
-        android:hint="Enter Text Here"
+        android:id="@+id/website_editText"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/sendText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="http://www.google.com" />
     <Button
-        android:text="Send"
+        android:id="@+id/open_website_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sendText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/sendButton"
-        android:onClick="launchMain"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-
-    <TextView
-        android:text=""
+        android:layout_marginBottom="24dp"
+        android:onClick="openWebsite"
+        android:text="Open Website" />
+    <EditText
+        android:id="@+id/location_editText"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_below="@+id/sendButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/showText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:text="Golden Date Bridge" />
+    <Button
+        android:id="@+id/open_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:onClick="openLocation"
+        android:text="Open Location" />
+    <EditText
+        android:id="@+id/share_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="That was the last task" />
+    <Button
+        android:id="@+id/share_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:onClick="shareText"
+        android:text="Share Text" />
+</LinearLayout>
