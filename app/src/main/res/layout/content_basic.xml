@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,41 +9,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.test.revise.BasicActivity"
     android:orientation="vertical">
-    <EditText
-        android:id="@+id/website_editText"
+
+    <TextView
+        android:id="@+id/hello_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="http://www.google.com" />
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="65sp"
+        android:text="Hello World" />
+
     <Button
-        android:id="@+id/open_website_button"
+        android:id="@+id/change_color_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:onClick="openWebsite"
-        android:text="Open Website" />
-    <EditText
-        android:id="@+id/location_editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Golden Date Bridge" />
-    <Button
-        android:id="@+id/open_location_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:onClick="openLocation"
-        android:text="Open Location" />
-    <EditText
-        android:id="@+id/share_editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="That was the last task" />
-    <Button
-        android:id="@+id/share_text_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:onClick="shareText"
-        android:text="Share Text" />
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="changeColor"
+        android:text="Change Color" />
+
+</RelativeLayout>
